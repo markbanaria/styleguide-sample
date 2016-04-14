@@ -1,6 +1,7 @@
 # styleguide-sample
 
 `/assets/stylesheets/global` - colors, typography and spacing
+
 `/assets/stylesheets/components` - buttons, input fields, cards
 
 *for buttons I used 2 methods:
