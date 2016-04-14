@@ -1,0 +1,102 @@
+//New Namespace
+
+
+//default button
+.sc-button {
+  background: $gray-4;
+  color: $copy-1;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+//colors
+.sc-button-green {
+  background: $green-dark;
+  color: white;
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($green-dark, 5%);
+  }
+}
+.sc-button-blue {
+  background: $blue-main;
+  color: white;
+  &:hover, 
+  &:active,
+  &:focus {
+    background: darken($blue-main, 5%);
+  }
+}
+
+//sizing
+.sc-button-md {
+  padding: 14px 16px;
+}
+.sc-button-lg {
+  padding: 16px 16px;
+}
+.sc-button-xl {
+  font-size: 16px;
+  padding: 24px 24px;
+}
+
+
+//display
+.sc-button-full {
+  width: 100%;
+}
+
+
+
+
+
+//Bootstrap Override
+
+
+//default button
+.btn {
+  background: $gray-4;
+  border: none;
+  border-radius: 0;
+  color: $copy-1;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16px;
+}
+
+//colors
+.btn-success {
+  background: $green-dark;
+  color: white;
+  &:hover, 
+  &:active,
+  &:focus {
+    background: darken($green-dark, 5%);
+  }
+}
+.btn-primary {
+  background: $blue-main;
+  color: white;
+  &:hover, 
+  &:active,
+  &:focus {
+    background: darken($blue-main, 5%);
+  }
+}
+
+//sizing
+.btn-md {
+  padding: 14px 16px;
+}
+.btn-lg {
+  padding: 16px 16px;
+}
+.btn-xl {
+  font-size: 16px;
+  padding: 24px 24px;
+}

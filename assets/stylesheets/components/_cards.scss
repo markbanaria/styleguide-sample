@@ -1,0 +1,35 @@
+//default styling
+.card {
+  box-shadow: 0 4px 8px rgba(black, 0.12);
+}
+
+//subcomponents
+.card-content {
+  border-radius: 2px;
+  background: white;
+}
+.card-depth {
+  box-shadow: 0 2px 4px rgba(black, 0.12);
+}
+
+//modifiers
+.card-flat {
+  box-shadow: none;
+}
+.card-clickable {
+    transition: 0.2s box-shadow linear;
+  &:hover { 
+    box-shadow: 0 12px 24px rgba(black, 0.32);
+  }
+  &:active { 
+    box-shadow: 0 4px 8px rgba(black, 0.12);
+  }
+}
+
+//sizing
+.card-pad-md {
+  padding: 24px;
+}
+.card-pad-lg {
+  padding: 32px;
+}

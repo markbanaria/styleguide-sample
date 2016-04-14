@@ -1,0 +1,22 @@
+//default input
+input[type="text"] {
+  border: 1px solid $gray-4;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  padding: 14px 16px;  
+}
+
+//sizing
+input[type="text"].input-lg {
+  padding: 16px 16px;
+  border-radius: 0;
+  height: inherit;
+}
+
+//modifiers
+input[type="text"].input-invalid {
+  border: 1px solid tomato;
+}
