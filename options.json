@@ -1,0 +1,49 @@
+{
+    "head": {
+        "title": "Service Seeking",
+        "meta": "Meta content"
+    },
+    "url": "https://www.serviceseeking.com.au",
+    "links": {
+        "blog": "https://www.serviceseeking.com.au/blog",
+        "websites": "https://www.serviceseeking.com.au/products/websites/new",
+        "logos": "https://www.serviceseeking.com.au/products/logos/new",
+        "certification": "https://www.serviceseeking.com.au/products/certifications/new",
+        "plumbers": "https://www.serviceseeking.com.au/new-job/plumbing-gasfitting/plumber.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=plumbers",
+        "builders": "https://www.serviceseeking.com.au/new-job/builder/builder-1.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=builders",
+        "movers": "https://www.serviceseeking.com.au/new-job/furniture-removal/furniture-removal.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=movers",
+        "cleaners": "https://www.serviceseeking.com.au/new-job/cleaning/house-cleaning.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=house_cleaning",
+        "gardeners": "https://www.serviceseeking.com.au/new-job/gardening/gardeners.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=gardening",
+        "handymen": "https://www.serviceseeking.com.au/new-job/handyman/handyman.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=handyman",
+        "electricians": "https://www.serviceseeking.com.au/new-job/electrician/electrical_services.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=electrical_services",
+        "painters": "https://www.serviceseeking.com.au/new-job/painters/painters.html?utm_source=industryfooter&utm_medium=email&utm_term=industryfooter&utm_content=industryfooter&utm_campaign=painters",
+        "t_and_c": "https://www.serviceseeking.com.au/blog/other/giveaway/"
+    },
+    "assets": {
+        "url": "https://www.serviceseeking.com.au/assets",
+        "mailer_url": "https://www.serviceseeking.com.au/assets/mailer",
+        "footer_url": "https://www.serviceseeking.com.au/assets/mailer/email-footer-assets"
+    },
+    "apps": {
+        "ios": "https://itunes.apple.com/au/app/serviceseeking/id848828489?mt=8&amp;uo=4",
+        "ios_business": "https://itunes.apple.com/au/app/service-seeking-for-business/id1079768274?mt=8",
+        "android": "https://play.google.com/store/apps/details?id=au.com.serviceseeking",
+        "android_business": ""
+    },
+    "phone": {
+        "support_styled": "1300 304 647",
+        "support": "1300304647",
+        "tel_support_href": "tel:1300304647"
+    },
+    "email": {
+        "support_href": "mailto:support@serviceseeking.com.au",
+        "support": "support@serviceseeking.com.au"
+    },
+    "font_family": "font-family: 'Avenir', 'Open Sans', sans-serif;",
+    "td": {
+        "border_style": "padding: 0; vertical-align: top; font-size: 1px; line-height: 1px; background-color: #E9EFEE; width: 1px"
+    },
+    "table": {
+        "style": "border-collapse: collapse; border-spacing: 0; Margin-left: auto; Margin-right: auto;"
+    }
+}

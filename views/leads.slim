@@ -1,0 +1,412 @@
+doctype html
+html lang="en"
+  head
+    title ServiceSeeking
+    meta content=("text/html; charset=utf-8") http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    link rel="stylesheet" href="../libraries/bootstrap.css" type="text/css" /
+    link rel="stylesheet" href="../libraries/application.css" type="text/css" /
+    link rel="stylesheet" type="text/css" href="../public/style.css" /
+  body
+    #mobile-nav.mobile-nav
+      .nav-wrapper
+        button.close-button aria-hidden="true" data-dismiss="modal" type="button"  ×
+        ul.m0.list-unstyled
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/leads" 
+              | Leads
+              span.leads-count.count-notification.ml5.label.label-important 4
+          li#quotes-tab.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/quotes"  Quotes
+          li#payments-tab.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/job_payments"  Invoicing &amp; Payments
+          li
+            a.btn-block href="https://admin.serviceseeking.com.au/leads"  Use as Business
+          li
+            a.btn-block href="https://admin.serviceseeking.com.au/site/my_jobs"  Use as Customer
+        hr/
+        ul.m0.list-unstyled
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/new-job"  Get Quotes
+        ul.m0.list-unstyled.section.profile
+          li.header Profile
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/my-profile/edit"  Edit
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/my-profile"  Preview
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/id_check/details"  ID Verification
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/success_fees?sort=created_at_desc&amp;status%5B%5D=unpaid"  My Success Fees
+        ul.m0.list-unstyled.section.feedback
+          li.header Feedback
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/provider_accounts/feedback"  View All
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/feedback_requests/new"  Get External
+        hr/
+        ul.m0.list-unstyled
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/blog"  Blog
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/how-it-works"  How it Works
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/feedback/leave_feedback"  Leave Feedback
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/categories"  Browse Industries
+        ul.m0.list-unstyled.my-account
+          li.header My Account
+          li.m0
+            a.btn-block href="https://admin.serviceseeking.com.au/settings"  Settings
+        hr/
+        li.m0
+          a.btn-block data-method="delete" href="https://admin.serviceseeking.com.au/users/sign_out" rel="nofollow"  Logout
+    #page-wrap.page-wrap
+      #main-masthead
+        .sticky-wrapper style="height: 108px;"
+          #new-header.masthead.hidden-xs.sticky-header.stuck
+            nav.navbar.navbar-default.mb0 role="navigation" 
+              .container
+                .navbar-header.logo
+                  a.relative.logo-text-img href="https://admin.serviceseeking.com.au/?_h=1" 
+                    img alt="Service Seeking" src="https://admin.serviceseeking.com.au/assets/full-primary-hi-res-a1ed1bd5ecf6a7c7bbe80ab8a8fec39ccaa378d884c525d3a1776cb9d85bbe71.png" /
+                .collapse.navbar-collapse
+                  ul.nav.navbar-nav.navbar-right.main-nav
+                    li.nav-link
+                      a href="https://admin.serviceseeking.com.au/new-job"  Get Quotes
+                    li#user-dropdown.dropdown.nav-link
+                      a.dropdown-toggle data-toggle="dropdown" href="https://admin.serviceseeking.com.au/leads/2027686#" 
+                        | Charles Cruz
+            nav.navbar.m0.secondary-nav role="navigation" 
+              .container
+                ul#ul-second-nav.nav.navbar-nav
+                  li.li-admin
+                    a.btn-block href="https://admin.serviceseeking.com.au/admin/"  Admin
+                  li.relative
+                    a.btn-block href="https://admin.serviceseeking.com.au/leads" 
+                      | Leads
+                      span.leads-count.count-notification.ml10.label 4
+                  li#quotes-tab
+                    a.btn-block href="https://admin.serviceseeking.com.au/quotes?date=all"  Quotes
+                  li#invoicing-payments-tab
+                    a.btn-block href="https://admin.serviceseeking.com.au/job_payments"  Invoicing &amp; Payments
+      #main role="main" 
+        #page-info
+          #flash
+        #job-leads.index.wrapper
+          #main-header
+            .container
+              .row
+                .col-xs-12
+                  .leads
+                    .pull-left
+                      h1.text-darkblue Leads
+          .container
+            .row
+              .col-sm-4.col-md-3.hidden-xs.left-nav.mt20
+                .menu.job-type-filter
+                  .menu-header
+                    .title
+                      | Job Type
+                      a#reset-job-type-filter.reset.btn-link href="#"  Reset
+                  .menu-items.filters
+                    .checkbox
+                      label
+                        input disabled="" type="checkbox" value="featured" /
+                        span
+                          | Featured
+                          a.nw.text-muted (0)
+                    .checkbox
+                      label
+                        input disabled="" type="checkbox" value="urgent" /
+                        span
+                          | Urgent
+                          a.nw.text-muted (0)
+                    .checkbox
+                      label
+                        input disabled="" type="checkbox" value="private" /
+                        span
+                          | Email Only
+                          a.nw.text-muted (0)
+                    button.btn.btn-clear.filter-btn.btn-block.btn-sm.mb10 Apply
+                .menu.area-coverage-filter
+                  .menu-header
+                    .title
+                      | Area Coverage
+                      a#reset_area_coverage_filter.reset.btn-link href="https://admin.serviceseeking.com.au/leads/2027686#"  Reset
+                  .menu-items
+                    span.lbound 0 km
+                    #coverage_slider.slider.slider-horizontal
+                      .slider-track
+                        .slider-track-low style="left: 0px; width: 0%;"
+                        .slider-selection style="left: 0%; width: 100%;"
+                        .slider-track-high style="right: 0px; width: 0%;"
+                        .slider-handle.min-slider-handle.round style="left: 100%;" tabindex="0" 
+                        .slider-handle.max-slider-handle.round.hide style="left: 0%;" tabindex="0" 
+                      .tooltip.tooltip-main.top style="left: 100%; margin-left: -21.5px;" 
+                        .tooltip-arrow
+                        .tooltip-inner 2302
+                      .tooltip.tooltip-min.top style="display: none;"
+                        .tooltip-arrow
+                        .tooltip-inner
+                      .tooltip.tooltip-max.bottom style="top: 18px; display: none;"
+                        .tooltip-arrow
+                        .tooltip-inner
+                    input#coverage_slider_input.hidden data="value: '2302'" data-slider-id="coverage_slider" data-slider-max="2302" data-slider-min="0" data-slider-value="2302" style="display: none;" type="text" value="2302" /
+                    span.ubound 2302 km
+                    #coverage_value.mt10 2302 km
+                    .text-muted.fs10
+                      | from Alice Springs, NT, 872
+                    .btn-wrapper
+                      button#apply-area-coverage-filter.btn.btn-clear.filter-btn.btn-block.btn-sm Apply
+                .menu.eoi-templates
+                  .menu-header
+                    .title Your Templates
+                    a#manage-eoi-templates.fs10 href="https://admin.serviceseeking.com.au/leads/2027686#!"  Manage All (0)
+                  ul.list-unstyled.mb0.menu-items
+                #contact_us.text-left
+                  h4.mb20 Your Dedicated Account Manager
+                  p
+                    i.ficon-user-male.mr10
+                    | Noelle
+                  p
+                    i.ficon-phone.mr10
+                    | (02) 8488 2962
+                .certification.mt20
+                  .icon.ficon-certification-1
+                  h2.mb5 Certification
+                  h3 $9.95/month
+                  p Our "Certified" badge lets customers know that you are skilled in quoting and following up.
+                  a.btn.btn-success.btn-block href="https://admin.serviceseeking.com.au/products/certifications/new"  Find Out More
+              #leads-list.col-sm-8.col-md-9
+                #sort-by.row.mt20.mb20
+                  .col-xs-9.hidden-xs
+                    h2.text-darkblue
+                      span.leads-count 5
+                      span Results
+                  .col-xs-6.visible-xs
+                    a#manage-eoi-templates.btn.btn-xs Manage Templates
+                  .col-sm-3.col-xs-offset-6.col-sm-offset-0
+                    select.form-control.bs-select-hidden onchange="location = this.options[this.selectedIndex].value;"
+                      option selected="selected" value="/leads" 
+                        | Newest
+                      option value="/leads?sort=closest" 
+                        | Closest
+                    .btn-group.bootstrap-select.form-control
+                      button.btn.dropdown-toggle.btn-default data-toggle="dropdown" title="Newest" type="button" 
+                        span.filter-option.pull-left
+                          | Newest
+                        | &nbsp;
+                        span.caret
+                      .dropdown-menu.open
+                        ul.dropdown-menu.inner role="menu" 
+                          li.selected data-original-index="0" 
+                            a data-tokens="null" style="" tabindex="0" 
+                              span.text
+                                | Newest
+                              span.glyphicon.glyphicon-ok.check-mark
+                          li data-original-index="1" 
+                            a data-tokens="null" style="" tabindex="0" 
+                              span.text
+                                | Closest
+                              span.glyphicon.glyphicon-ok.check-mark
+                #lead-2144450.row.eoi-lead-box.card
+                  .col-xs-12.lead-box.card-content.depth
+                    .row.discard-lead.text-right
+                      a.col-xs-12.delete-lead data-method="delete" data-remote="true" href="https://admin.serviceseeking.com.au/api/leads/2144450/discard.json" rel="nofollow" 
+                        span.fs11.p discard lead
+                        i.ficon-delete.fs10
+                    .row
+                      /! = cell('businesses/lead/job_details', lead)
+                      .col-sm-6.col-md-7.p20.lead-info-wrapper
+                        .info.tab-pane.active
+                          .row.lead-title
+                            .col-xs-12
+                              .job-title.mb10.fs18 Mia's Alteration job
+                          .row.mb10.key-info.text-muted
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-location.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    span.locality> Kingsford
+                                    | ,
+                                    span.region NSW
+                                    small.ml5
+                                      | 2034
+                                      | km
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-calendar.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    | Posted
+                                    i Today
+                          .row.text-muted.mb10
+                            .col-xs-1.pr0
+                              i.ficon-get-quotes.fs16
+                            .col-xs-10.lh2.quotes-count-text
+                              | 0 Quotes
+                          .row
+                            .col-xs-12.job-desc
+                              .lead-desc-wrapper
+                                p The garter got disconnected and maybe needs replacement.
+                                p
+                                  | MEETING REQUIRED
+                                  br/
+                                  | \- I need a face-to-face meeting to discuss the job.
+                                  br/
+                                  | \- I'm available to meet on Monday, Tuesday, Th...
+                              p I need the job done within 1 week
+                              .show-lead-desc-wrapper.mt10.col-sm-7.pl0
+                                a.btn.btn-block.show-lead-desc data-desc="&lt;p&gt;The garter got disconnected and maybe needs replacement. &lt;/p&gt;\n                                                   &lt;p&gt;MEETING REQUIRED\n                                                   &lt;br /&gt; - I need a face-to-face meeting to discuss the job. \n                                                   &lt;br /&gt; - I'm available to meet on Monday), Tuesday, Thursday, Saturday and Sunday.&lt;/p&gt;" href="https://admin.serviceseeking.com.au/leads/2027686#" 
+                                  | Show full details
+                      .col-sm-6.col-md-5.eoi-info-wrapper
+                        .row.quote-btn-wrapper
+                          .col-xs-12
+                            .center-quote
+                              a.commission-modal-link.text-center.btn.btn-block.btn-lg.quote-btn.btn-success href="https://admin.serviceseeking.com.au/id_check/details"  Contact Customer
+                        .row.quote-form
+                          .col-xs-12
+                            .loading.text-center.pt20.hidden
+                              .spinner-icon
+                              span.loading-text.ml10 Loading...
+                    .row
+                      .col-xs-12.pull-right
+                        .crm-container
+                #lead-2143158.row.eoi-lead-box.card
+                  .col-xs-12.lead-box.card-content.depth
+                    .row
+                      /! = cell('businesses/lead/job_details', lead)
+                      .col-sm-6.col-md-7.p20.lead-info-wrapper
+                        .info.tab-pane.active
+                          .row.lead-title
+                            .col-xs-12
+                              .job-title.mb10.fs18 Kat's Alteration job
+                          .row.mb10.key-info.text-muted
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-location.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    span.locality> Alice Springs
+                                    | ,
+                                    span.region NT
+                                    small.ml5
+                                      | 0
+                                      | km
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-calendar.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    | Posted
+                                    i Yesterday
+                          .row.text-muted.mb10
+                            .col-xs-1.pr0
+                              i.ficon-get-quotes.fs16
+                            .col-xs-10.lh2.quotes-count-text
+                              | 0 Quotes
+                          .row
+                            .col-xs-12.job-desc
+                              .lead-desc-wrapper
+                                p testing for alterations
+                              p I need the job done within 1 week
+                      .col-sm-6.col-md-5.eoi-info-wrapper
+                        .row.quote-btn-wrapper
+                          .col-xs-12
+                            .row.fs10.todo-id-check
+                              a.first-item.col-xs-6.todo.active.pr5 href="https://admin.serviceseeking.com.au/id_check/details" 
+                                span.nstep 1
+                                span Add Payment Details
+                              a.col-xs-6.todo.active href="https://admin.serviceseeking.com.au/id_check/details" 
+                                span.nstep 2
+                                span Complete ID Check
+                            .center-quote
+                              a.commission-modal-link.text-center.btn.btn-block.btn-lg.quote-btn.btn-success href="https://admin.serviceseeking.com.au/id_check/details"  Contact Customer
+                        .row.quote-form
+                          .col-xs-12
+                            .loading.text-center.pt20.hidden
+                              .spinner-icon
+                              span.loading-text.ml10 Loading...
+                    .row
+                      .col-xs-12.pull-right
+                        .crm-container
+                #lead-2143109.row.eoi-lead-box.card
+                  .col-xs-12.lead-box.card-content.depth
+                    .row
+                      /! = cell('businesses/lead/job_details', lead)
+                      .col-sm-6.col-md-7.p20.lead-info-wrapper
+                        .info.tab-pane.active
+                          .row.lead-title
+                            .col-xs-12
+                              .job-title.mb10.fs18 Kat's Alteration job
+                          .row.mb10.key-info.text-muted
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-location.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    span.locality> Alice Springs
+                                    | ,
+                                    span.region NT
+                                    small.ml5
+                                      | 0
+                                      | km
+                            .col-xs-6.col-sm-12.col-md-6
+                              .row
+                                .col-xs-3.col-sm-2
+                                  i.ficon-calendar.fs16
+                                .col-xs-9.col-sm-10.p0
+                                  .icon-text
+                                    | Posted
+                                    i Yesterday
+                          .row.text-muted.mb10
+                            .col-xs-1.pr0
+                              i.ficon-get-quotes.fs16
+                            .col-xs-10.lh2.quotes-count-text
+                              | 0 Quotes
+                          .row
+                            .col-xs-12.job-desc
+                              .lead-desc-wrapper
+                                p testing alterations
+                                p
+                                  | CONTACT PREFERENCES
+                                  br/
+                                  | \- Email Only Please
+                              p I need the job done within 1 week
+                      .col-sm-6.col-md-5.eoi-info-wrapper
+                        .row.quote-btn-wrapper
+                          .col-xs-12
+                            .row.fs10.todo-id-check
+                              a.first-item.col-xs-6.todo.active.pr5 href="https://admin.serviceseeking.com.au/id_check/details" 
+                                span.nstep 1
+                                span Add Payment Details
+                              a.col-xs-6.todo.active href="https://admin.serviceseeking.com.au/id_check/details" 
+                                span.nstep 2
+                                span Complete ID Check
+                            .center-quote
+                              a.commission-modal-link.text-center.btn.btn-block.btn-lg.quote-btn.btn-success href="https://admin.serviceseeking.com.au/id_check/details"  Contact Customer
+                        .row.quote-form
+                          .col-xs-12
+                            .loading.text-center.pt20.hidden
+                              .spinner-icon
+                              span.loading-text.ml10 Loading...
+                    .row
+                      .col-xs-12.pull-right
+                        .crm-container
+                #infinite-leads.next-page.row
+                  .col-sm-6.col-md-7
+                    .load-more
+                      a#load-more.btn.btn-clear.btn-block.btn-lg data-remote="true" href="https://admin.serviceseeking.com.au/leads/2027686#"  View More Jobs
+                    .loading.text-center.hidden
+                      .spinner-icon
+                      span.loading-text.ml10 Loading leads...
+
+    

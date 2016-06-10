@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ServiceSeeking</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <link href="../libraries/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../libraries/application.css" rel="stylesheet" type="text/css" />
+    <link href="../public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="nav-wrapper">
+        <button aria-hidden="true" class="close-button" data-dismiss="modal" type="button"> ×</button>
+        <ul class="m0 list-unstyled">
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/leads">Leads<span class="leads-count count-notification ml5 label label-important">4</span></a>
+          </li>
+          <li class="m0" id="quotes-tab">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/quotes"> Quotes</a>
+          </li>
+          <li class="m0" id="payments-tab">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/job_payments"> Invoicing &amp; Payments</a>
+          </li>
+          <li>
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/leads"> Use as Business</a>
+          </li>
+          <li>
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/site/my_jobs"> Use as Customer</a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="m0 list-unstyled">
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/new-job"> Get Quotes</a>
+          </li>
+        </ul>
+        <ul class="m0 list-unstyled section profile">
+          <li class="header">
+            Profile
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/my-profile/edit"> Edit</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/my-profile"> Preview</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/id_check/details"> ID Verification</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/success_fees?sort=created_at_desc&amp;amp;status%5B%5D=unpaid"> My Success Fees</a>
+          </li>
+        </ul>
+        <ul class="m0 list-unstyled section feedback">
+          <li class="header">
+            Feedback
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/provider_accounts/feedback"> View All</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/feedback_requests/new"> Get External</a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="m0 list-unstyled">
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/blog"> Blog</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/how-it-works"> How it Works</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/feedback/leave_feedback"> Leave Feedback</a>
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/categories"> Browse Industries</a>
+          </li>
+        </ul>
+        <ul class="m0 list-unstyled my-account">
+          <li class="header">
+            My Account
+          </li>
+          <li class="m0">
+            <a class="btn-block" href="https://admin.serviceseeking.com.au/settings"> Settings</a>
+          </li>
+        </ul>
+        <hr />
+        <li class="m0">
+          <a class="btn-block" data-method="delete" href="https://admin.serviceseeking.com.au/users/sign_out" rel="nofollow"> Logout</a>
+        </li>
+      </div>
+    </div>
+    <div class="page-wrap" id="page-wrap">
+      <div id="main-masthead">
+        <div class="sticky-wrapper" style="height: 108px;">
+          <div class="masthead hidden-xs sticky-header stuck" id="new-header">
+            <nav class="navbar navbar-default mb0" role="navigation">
+              <div class="container">
+                <div class="navbar-header logo">
+                  <a class="relative logo-text-img" href="https://admin.serviceseeking.com.au/?_h=1"><img alt="Service Seeking" src="https://admin.serviceseeking.com.au/assets/full-primary-hi-res-a1ed1bd5ecf6a7c7bbe80ab8a8fec39ccaa378d884c525d3a1776cb9d85bbe71.png" /></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right main-nav">
+                    <li class="nav-link">
+                      <a href="https://admin.serviceseeking.com.au/new-job"> Get Quotes</a>
+                    </li>
+                    <li class="dropdown nav-link" id="user-dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="https://admin.serviceseeking.com.au/leads/2027686#">Charles Cruz</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <nav class="navbar m0 secondary-nav" role="navigation">
+              <div class="container">
+                <ul class="nav navbar-nav" id="ul-second-nav">
+                  <li class="li-admin">
+                    <a class="btn-block" href="https://admin.serviceseeking.com.au/admin/"> Admin</a>
+                  </li>
+                  <li class="relative">
+                    <a class="btn-block" href="https://admin.serviceseeking.com.au/leads">Leads<span class="leads-count count-notification ml10 label">4</span></a>
+                  </li>
+                  <li id="quotes-tab">
+                    <a class="btn-block" href="https://admin.serviceseeking.com.au/quotes?date=all"> Quotes</a>
+                  </li>
+                  <li id="invoicing-payments-tab">
+                    <a class="btn-block" href="https://admin.serviceseeking.com.au/job_payments"> Invoicing &amp; Payments</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div id="page-info">
+          <div id="flash"></div>
+        </div>
+        <div class="index wrapper" id="job-leads">
+          <div id="main-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="leads">
+                    <div class="pull-left">
+                      <h1 class="text-darkblue">
+                        Leads
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-md-3 hidden-xs left-nav mt20">
+                <div class="menu job-type-filter">
+                  <div class="menu-header">
+                    <div class="title">
+                      Job Type<a class="reset btn-link" href="#" id="reset-job-type-filter"> Reset</a>
+                    </div>
+                  </div>
+                  <div class="menu-items filters">
+                    <div class="checkbox">
+                      <label><input disabled="" type="checkbox" value="featured" /><span>Featured<a 0="" class="nw text-muted"></a></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input disabled="" type="checkbox" value="urgent" /><span>Urgent<a 0="" class="nw text-muted"></a></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input disabled="" type="checkbox" value="private" /><span>Email Only<a 0="" class="nw text-muted"></a></span></label>
+                    </div>
+                    <button class="btn btn-clear filter-btn btn-block btn-sm mb10">Apply</button>
+                  </div>
+                </div>
+                <div class="menu area-coverage-filter">
+                  <div class="menu-header">
+                    <div class="title">
+                      Area Coverage<a class="reset btn-link" href="https://admin.serviceseeking.com.au/leads/2027686#" id="reset_area_coverage_filter"> Reset</a>
+                    </div>
+                  </div>
+                  <div class="menu-items">
+                    <span class="lbound">0 km</span>
+                    <div class="slider slider-horizontal" id="coverage_slider">
+                      <div class="slider-track">
+                        <div class="slider-track-low" style="left: 0px; width: 0%;"></div>
+                        <div class="slider-selection" style="left: 0%; width: 100%;"></div>
+                        <div class="slider-track-high" style="right: 0px; width: 0%;"></div>
+                        <div class="slider-handle min-slider-handle round" style="left: 100%;" tabindex="0"></div>
+                        <div class="slider-handle max-slider-handle round hide" style="left: 0%;" tabindex="0"></div>
+                      </div>
+                      <div class="tooltip tooltip-main top" style="left: 100%; margin-left: -21.5px;">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner">
+                          2302
+                        </div>
+                      </div>
+                      <div class="tooltip tooltip-min top" style="display: none;">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner"></div>
+                      </div>
+                      <div class="tooltip tooltip-max bottom" style="top: 18px; display: none;">
+                        <div class="tooltip-arrow"></div>
+                        <div class="tooltip-inner"></div>
+                      </div>
+                    </div>
+                    <input class="hidden" data="value: &#39;2302&#39;" data-slider-id="coverage_slider" data-slider-max="2302" data-slider-min="0" data-slider-value="2302" id="coverage_slider_input" style="display: none;" type="text" value="2302" /><span class="ubound">2302 km</span>
+                    <div class="mt10" id="coverage_value">
+                      2302 km
+                    </div>
+                    <div class="text-muted fs10">
+                      from Alice Springs, NT, 872
+                    </div>
+                    <div class="btn-wrapper">
+                      <button class="btn btn-clear filter-btn btn-block btn-sm" id="apply-area-coverage-filter">Apply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu eoi-templates">
+                  <div class="menu-header">
+                    <div class="title">
+                      Your Templates
+                    </div>
+                    <a class="fs10" href="https://admin.serviceseeking.com.au/leads/2027686#!" id="manage-eoi-templates"> Manage All (0)</a>
+                  </div>
+                  <ul class="list-unstyled mb0 menu-items"></ul>
+                </div>
+                <div class="text-left" id="contact_us">
+                  <h4 class="mb20">
+                    Your Dedicated Account Manager
+                  </h4>
+                  <p>
+                    <i class="ficon-user-male mr10"></i>Noelle
+                  </p>
+                  <p>
+                    <i class="ficon-phone mr10"></i>(02) 8488 2962
+                  </p>
+                </div>
+                <div class="certification mt20">
+                  <div class="icon ficon-certification-1"></div>
+                  <h2 class="mb5">
+                    Certification
+                  </h2>
+                  <h3>
+                    $9.95/month
+                  </h3>
+                  <p>
+                    Our "Certified" badge lets customers know that you are skilled in quoting and following up.
+                  </p>
+                  <a class="btn btn-success btn-block" href="https://admin.serviceseeking.com.au/products/certifications/new"> Find Out More</a>
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-9" id="leads-list">
+                <div class="row mt20 mb20" id="sort-by">
+                  <div class="col-xs-9 hidden-xs">
+                    <h2 class="text-darkblue">
+                      <span class="leads-count">5</span><span>Results</span>
+                    </h2>
+                  </div>
+                  <div class="col-xs-6 visible-xs">
+                    <a class="btn btn-xs" id="manage-eoi-templates">Manage Templates</a>
+                  </div>
+                  <div class="col-sm-3 col-xs-offset-6 col-sm-offset-0">
+                    <select class="form-control bs-select-hidden" onchange="location = this.options[this.selectedIndex].value;">
+                      <option selected="selected" value="/leads">
+                        Newest
+                      </option>
+                      <option value="/leads?sort=closest">
+                        Closest
+                      </option>
+                    </select>
+                    <div class="btn-group bootstrap-select form-control">
+                      <button class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Newest" type="button"><span class="filter-option pull-left">Newest</span>&nbsp;<span class="caret"></span></button>
+                      <div class="dropdown-menu open">
+                        <ul class="dropdown-menu inner" role="menu">
+                          <li class="selected" data-original-index="0">
+                            <a data-tokens="null" style="" tabindex="0"><span class="text">Newest</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                          </li>
+                          <li data-original-index="1">
+                            <a data-tokens="null" style="" tabindex="0"><span class="text">Closest</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row eoi-lead-box card" id="lead-2144450">
+                  <div class="col-xs-12 lead-box card-content depth">
+                    <div class="row discard-lead text-right">
+                      <a class="col-xs-12 delete-lead" data-method="delete" data-remote="true" href="https://admin.serviceseeking.com.au/api/leads/2144450/discard.json" rel="nofollow"><span class="fs11 p">discard lead</span><i class="ficon-delete fs10"></i></a>
+                    </div>
+                    <div class="row">
+                      <!--= cell('businesses/lead/job_details', lead)-->
+                      <div class="col-sm-6 col-md-7 p20 lead-info-wrapper">
+                        <div class="info tab-pane active">
+                          <div class="row lead-title">
+                            <div class="col-xs-12">
+                              <div class="job-title mb10 fs18">
+                                Mia's Alteration job
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb10 key-info text-muted">
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-location fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    <span class="locality">Kingsford</span> ,<span class="region">NSW</span><small class="ml5">2034km</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-calendar fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    Posted<i>Today</i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row text-muted mb10">
+                            <div class="col-xs-1 pr0">
+                              <i class="ficon-get-quotes fs16"></i>
+                            </div>
+                            <div class="col-xs-10 lh2 quotes-count-text">
+                              0 Quotes
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 job-desc">
+                              <div class="lead-desc-wrapper">
+                                <p>
+                                  The garter got disconnected and maybe needs replacement.
+                                </p>
+                                <p>
+                                  MEETING REQUIRED<br />\- I need a face-to-face meeting to discuss the job.<br />\- I'm available to meet on Monday, Tuesday, Th...
+                                </p>
+                              </div>
+                              <p>
+                                I need the job done within 1 week
+                              </p>
+                              <div class="show-lead-desc-wrapper mt10 col-sm-7 pl0">
+                                <a class="btn btn-block show-lead-desc" data-desc="&amp;lt;p&amp;gt;The garter got disconnected and maybe needs replacement. &amp;lt;/p&amp;gt;\n                                                   &amp;lt;p&amp;gt;MEETING REQUIRED\n                                                   &amp;lt;br /&amp;gt; - I need a face-to-face meeting to discuss the job. \n                                                   &amp;lt;br /&amp;gt; - I&#39;m available to meet on Monday), Tuesday, Thursday, Saturday and Sunday.&amp;lt;/p&amp;gt;" href="https://admin.serviceseeking.com.au/leads/2027686#">Show full details</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-5 eoi-info-wrapper">
+                        <div class="row quote-btn-wrapper">
+                          <div class="col-xs-12">
+                            <div class="center-quote">
+                              <a class="commission-modal-link text-center btn btn-block btn-lg quote-btn btn-success" href="https://admin.serviceseeking.com.au/id_check/details"> Contact Customer</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row quote-form">
+                          <div class="col-xs-12">
+                            <div class="loading text-center pt20 hidden">
+                              <div class="spinner-icon"></div>
+                              <span class="loading-text ml10">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 pull-right">
+                        <div class="crm-container"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row eoi-lead-box card" id="lead-2143158">
+                  <div class="col-xs-12 lead-box card-content depth">
+                    <div class="row">
+                      <!--= cell('businesses/lead/job_details', lead)-->
+                      <div class="col-sm-6 col-md-7 p20 lead-info-wrapper">
+                        <div class="info tab-pane active">
+                          <div class="row lead-title">
+                            <div class="col-xs-12">
+                              <div class="job-title mb10 fs18">
+                                Kat's Alteration job
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb10 key-info text-muted">
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-location fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    <span class="locality">Alice Springs</span> ,<span class="region">NT</span><small class="ml5">0km</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-calendar fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    Posted<i>Yesterday</i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row text-muted mb10">
+                            <div class="col-xs-1 pr0">
+                              <i class="ficon-get-quotes fs16"></i>
+                            </div>
+                            <div class="col-xs-10 lh2 quotes-count-text">
+                              0 Quotes
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 job-desc">
+                              <div class="lead-desc-wrapper">
+                                <p>
+                                  testing for alterations
+                                </p>
+                              </div>
+                              <p>
+                                I need the job done within 1 week
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-5 eoi-info-wrapper">
+                        <div class="row quote-btn-wrapper">
+                          <div class="col-xs-12">
+                            <div class="row fs10 todo-id-check">
+                              <a class="first-item col-xs-6 todo active pr5" href="https://admin.serviceseeking.com.au/id_check/details"><span class="nstep">1</span><span>Add Payment Details</span></a><a class="col-xs-6 todo active" href="https://admin.serviceseeking.com.au/id_check/details"><span class="nstep">2</span><span>Complete ID Check</span></a>
+                            </div>
+                            <div class="center-quote">
+                              <a class="commission-modal-link text-center btn btn-block btn-lg quote-btn btn-success" href="https://admin.serviceseeking.com.au/id_check/details"> Contact Customer</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row quote-form">
+                          <div class="col-xs-12">
+                            <div class="loading text-center pt20 hidden">
+                              <div class="spinner-icon"></div>
+                              <span class="loading-text ml10">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 pull-right">
+                        <div class="crm-container"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row eoi-lead-box card" id="lead-2143109">
+                  <div class="col-xs-12 lead-box card-content depth">
+                    <div class="row">
+                      <!--= cell('businesses/lead/job_details', lead)-->
+                      <div class="col-sm-6 col-md-7 p20 lead-info-wrapper">
+                        <div class="info tab-pane active">
+                          <div class="row lead-title">
+                            <div class="col-xs-12">
+                              <div class="job-title mb10 fs18">
+                                Kat's Alteration job
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb10 key-info text-muted">
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-location fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    <span class="locality">Alice Springs</span> ,<span class="region">NT</span><small class="ml5">0km</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-12 col-md-6">
+                              <div class="row">
+                                <div class="col-xs-3 col-sm-2">
+                                  <i class="ficon-calendar fs16"></i>
+                                </div>
+                                <div class="col-xs-9 col-sm-10 p0">
+                                  <div class="icon-text">
+                                    Posted<i>Yesterday</i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row text-muted mb10">
+                            <div class="col-xs-1 pr0">
+                              <i class="ficon-get-quotes fs16"></i>
+                            </div>
+                            <div class="col-xs-10 lh2 quotes-count-text">
+                              0 Quotes
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 job-desc">
+                              <div class="lead-desc-wrapper">
+                                <p>
+                                  testing alterations
+                                </p>
+                                <p>
+                                  CONTACT PREFERENCES<br />\- Email Only Please
+                                </p>
+                              </div>
+                              <p>
+                                I need the job done within 1 week
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-5 eoi-info-wrapper">
+                        <div class="row quote-btn-wrapper">
+                          <div class="col-xs-12">
+                            <div class="row fs10 todo-id-check">
+                              <a class="first-item col-xs-6 todo active pr5" href="https://admin.serviceseeking.com.au/id_check/details"><span class="nstep">1</span><span>Add Payment Details</span></a><a class="col-xs-6 todo active" href="https://admin.serviceseeking.com.au/id_check/details"><span class="nstep">2</span><span>Complete ID Check</span></a>
+                            </div>
+                            <div class="center-quote">
+                              <a class="commission-modal-link text-center btn btn-block btn-lg quote-btn btn-success" href="https://admin.serviceseeking.com.au/id_check/details"> Contact Customer</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row quote-form">
+                          <div class="col-xs-12">
+                            <div class="loading text-center pt20 hidden">
+                              <div class="spinner-icon"></div>
+                              <span class="loading-text ml10">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 pull-right">
+                        <div class="crm-container"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="next-page row" id="infinite-leads">
+                  <div class="col-sm-6 col-md-7">
+                    <div class="load-more">
+                      <a class="btn btn-clear btn-block btn-lg" data-remote="true" href="https://admin.serviceseeking.com.au/leads/2027686#" id="load-more"> View More Jobs</a>
+                    </div>
+                    <div class="loading text-center hidden">
+                      <div class="spinner-icon"></div>
+                      <span class="loading-text ml10">Loading leads...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
